@@ -11,13 +11,20 @@
 	</head>
 	<body ng-app="App" ng-controller="AppController">
 		<h1>Transmogrify Internet Legalese</h1>
-	   	<div ngf-drop ng-model="files" class="drop-box" 
+		<div ngf-drop ng-model="files" class="drop-box" 
 	       ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true"
-	       ngf-accept="'.jpg,.png,.pdf'">Drop Images or PDFs files here</div>
-	       <div>
-	       	<ul>
+	       ngf-accept="'.jpg,.png,.pdf'">
+	       Drop Images or PDFs files here
+	    </div>
+	    <div> 
+	       <br><br><br><br><br><br>
+	       <h1>File List: </h1>
+	       <hr>
+	    </div>    
+	    <div>
+	    	<ul>
 	           	 <li ng-repeat="f in files">{{f.name}} :: {{f.size}} bytes :: {{f.url}}</li>
 	       	</ul>
-	       </div>
+	    </div>
 	</body>
 </html>
